@@ -1,3 +1,5 @@
+# -*- coding: UTF-8 -*-
+
 import os
 import sys
 from sqlalchemy import Column, ForeignKey, Integer, String
@@ -18,8 +20,8 @@ class Restaurant(Base):
 class MenuItem(Base):
     __tablename__ = 'menu_item'
 
-    name = Column(String(80), nullable=False)
     id = Column(Integer, primary_key=True)
+    name = Column(String(80), nullable=False)
     description = Column(String(250))
     price = Column(String(8))
     course = Column(String(250))
